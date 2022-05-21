@@ -1,0 +1,165 @@
+@font-face {
+    font-family: TeleNeo;
+    src: url("../fonts/Tele Neo Office.ttf");
+
+}
+
+@font-face {
+    font-family: TeleNeoBold;
+    src: url("../fonts/Tele Neo Office Bold.ttf");
+}
+
+@font-face {
+    font-family: TeleNeoExtraBold;
+    src: url("../fonts/Tele Neo Office Extrabold.ttf");
+}
+
+body {
+    background: white;
+    font-family: TeleNeo;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.input {
+    width: 504px !important;
+    height: 75px !important;
+    border-radius: 10px !important;
+    font-family: TeleNeo !important;
+    color: black !important;
+    font-size: 20pt !important;
+}
+
+.ml-min-30 {
+    margin-left: -30px;
+}
+
+input[type=checkbox] {
+    width: 40px;
+    height: 35px;
+    border-radius: 4px !important;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    width: 162px;
+    height: 55px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #e10074;
+    color: white;
+    font-family: TeleNeo !important;
+    font-size: 20pt !important;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: #f11084;
+}
+
+input[type=submit]:disabled {
+    background-color: #666666;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    font-family: TeleNeo;
+    font-size: 12pt;
+}
+
+span.required {
+    font-size: 14pt;
+}
+
+li {
+    font-family: TeleNeo;
+    line-height: 40px;
+    font-size: 25pt;
+    font-weight: 600;
+    margin-top: 30px;
+    type: disk;
+}
+
+.txt1 {
+    font-family: TeleNeo;
+    line-height: 35px;
+    font-size: 25pt;
+    font-weight: 600;
+    margin-top: 48px;
+}
+
+.txt2 {
+    font-family: TeleNeoExtraBold;
+    line-height: 60px;
+    font-size: 49pt;
+    margin-top: 28px;
+    color: p;
+}
+
+.txt3 {
+    font-family: TeleNeoBold;
+    line-height: 62px;
+    font-size: 45pt;
+    margin-top: 11px;
+    padding-left: 30px;
+    color: #e10074;
+    font-weight: 600;
+}
+
+.txt4 {
+    font-family: TeleNeo;
+    font-size: 25pt;
+    color: #e10074;
+    margin-top: 35px;
+    font-weight: 600;
+}
+
+.txt5 {
+    font-family: TeleNeo;
+    line-height: 40px;
+    font-size: 25pt;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+.txt6 {
+    font-family: TeleNeo;
+    font-size: 25pt;
+    color: #e10074;
+    margin-top: 55px;
+    font-weight: 600;
+}
+
+#modal {
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    z-index: 2000;
+    margin-top: 10%;
+}
+
+#modal-content {
+    background-color: black!important;
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity:0.5;
+    border: 0!important;
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 3000px;
+    z-index: 1000;
+}
