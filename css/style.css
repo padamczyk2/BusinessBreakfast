@@ -105,7 +105,7 @@ li {
     font-weight: 500;
 }
 .txt_hex {
-    font-family: "Arial";
+    font-family: Arial;
     line-height: 30px;
     font-size: 14pt;
     margin-top: 5px;
@@ -114,7 +114,7 @@ li {
 }
 
 .txt_agenda {
-    font-family: "Arial";
+    font-family: Arial;
     line-height: 30px;
     font-size: 14pt;
     margin-top: 5px;
@@ -123,13 +123,13 @@ li {
 }
 
 .txt_white {
-    font-family: "Arial";
+    font-family: Arial;
     line-height: 30px;
     font-size: 16pt;
-    padding-left:30px;
-    padding-top:30px;
-    padding-bottom: 30px;
-    padding-right: 30px;
+    padding-left:40px;
+    padding-top:40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
     color: white;
     font-weight: 500;
 }
@@ -145,8 +145,37 @@ li {
  .col_color {
      background-color: #ff5a00;
  }
+
+button {
+    color: #ffffff;
+    background-color: #ff5a00;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    border: 2px solid #ff5a00;
+    padding: 15px 50px;
+    cursor: pointer
+}
+button:hover {
+    color: #ff5a00;
+    background-color: #ffffff;
+}
+
+.form_background {
+    margin: 100px;
+    background-color: white;
+}
+.form_header {
+    text-align: center;
+    font-weight: normal;
+    font-size: 30pt;
+    line-height:45px;
+    font-family: Arial;
+    color: #ff5a00;
+}
+
 mark.orange {
-    font-family: "Arial";
+    font-family: Arial;
     line-height: 30px;
     background-color: transparent;
     font-size: 14pt;
@@ -156,7 +185,7 @@ mark.orange {
 }
 
 .txt_picto {
-    font-family: "Arial";
+    font-family: Arial;
     line-height: 30px;
     font-size: 18pt;
     margin-top: 20px;
