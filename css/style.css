@@ -70,21 +70,50 @@ li {
     type: disk;
 }
 
-.txt1 {
-    font-family: Myriad Pro;
+.txt_header1 {
+    font-family: Arial;
     line-height: 35px;
-    font-size: 15pt;
-    font-weight: 600;
+    font-size: 20pt;
+    font-weight: normal;
     color: #ff5a00;
-    margin-top: 48px;
+    margin-top: 80px;
 }
 
-.txt2 {
-    font-family: Myriad Pro;
+.txt_header2 {
+    font-family: Arial;
     line-height: 60px;
-    font-size: 34pt;
-    margin-top: 28px;
+    font-size: 30pt;
+    margin-top: 30px;
     color: black;
+    font-weight: bold;
+}
+
+.txt_header3 {
+    font-family: Arial;
+    line-height: 60px;
+    font-size: 22pt;
+    margin-top: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.txt_info {
+    font-family: "Myriad Pro";
+    line-height: 40px;
+    font-size: 16pt;
+    margin-top: 5px;
+    color: black;
+    font-weight: 500;
+}
+
+.txt1 {
+    font-family: Myriad Pro;
+    line-height: 30px;
+    font-size: 16pt;
+    margin-top: 50px;
+    padding-left: 0px;
+    color: black;
+    font-weight: 500;
 }
 
 .txt3 {
@@ -98,7 +127,7 @@ li {
 }
 
 .line {
-    border-top: 3px solid #ff5a00;
+    border-top: 5px solid #ff5a00;
 }
 
 #modal {
