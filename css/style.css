@@ -1,6 +1,18 @@
+@font-face {
+    font-family: BillenniumRegular;
+    src: url("../fonts/Billennium-Regular.otf");
+
+}
+
+@font-face {
+    font-family: BillenniumSemiBold;
+    src: url("../fonts/Billennium-SemiBold.otf");
+}
+
+
 body {
     background: white;
-    font-family: Myriad Pro;
+    font-family: BillenniumRegular;
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
@@ -10,13 +22,18 @@ body {
     width: 504px !important;
     height: 75px !important;
     border-radius: 10px !important;
-    font-family: Myriad Pro !important;
+    font-family: BillenniumRegular !important;
     color: black !important;
     font-size: 20pt !important;
 }
 
 .ml-min-30 {
     margin-left: -30px;
+}
+.bline{
+    border-color: #ff5a00;
+    border-style: solid;
+    border-width: 2px;
 }
 
 input[type=checkbox] {
@@ -31,16 +48,16 @@ input[type=submit] {
     width: 162px;
     height: 55px;
     border-radius: 5px;
-    border-width: 0px;
-    background-color: #ff5a00;
-    color: white;
-    font-family: Myriad Pro !important;
-    font-size: 12pt !important;
-    font-weight: bold;
+    border: 2px solid #ff5a00;
+    padding: 15px 50px;
+    cursor: pointer;
+    font-family: BillenniumSemiBold !important;
+    font-size: 20pt !important;
 }
 
 input[type=submit]:hover {
-    background-color: #ff5b01;
+    color: #ff5a00;
+    background-color: #ffffff;
 }
 
 input[type=submit]:disabled {
@@ -53,7 +70,7 @@ input[type=submit]:disabled {
 }
 
 span {
-    font-family: Myriad Pro;
+    font-family: BillenniumRegular;
     font-size: 12pt;
 }
 
@@ -62,7 +79,7 @@ span.required {
 }
 
 li {
-    font-family: Myriad Pro;
+    font-family: BillenniumSemiBold;
     line-height: 40px;
     font-size: 25pt;
     font-weight: 600;
@@ -71,25 +88,24 @@ li {
 }
 
 .txt_header1 {
-    font-family: Myriad Pro;
-    line-height: 35px;
-    font-size: 20pt;
+    font-family: BillenniumRegular;
+    line-height: 40px;
+    font-size: 24pt;
     font-weight: normal;
     color: #ff5a00;
     margin-top: 80px;
 }
 
 .txt_header2 {
-    font-family: Myriad Pro;
+    font-family: BillenniumSemiBold;
     line-height: 60px;
-    font-size: 30pt;
+    font-size: 36pt;
     margin-top: 30px;
     color: black;
-    font-weight: bold;
 }
 
 .txt_header3 {
-    font-family: Myriad Pro;
+    font-family: BillenniumSemiBold;
     line-height: 60px;
     font-size: 22pt;
     margin-top: 30px;
@@ -97,7 +113,7 @@ li {
     font-weight: bold;
 }
 .txt_info {
-    font-family: Myriad Pro;
+    font-family: BillenniumRegular;
     line-height: 40px;
     font-size: 16pt;
     margin-top: 5px;
@@ -105,7 +121,7 @@ li {
     font-weight: 500;
 }
 .txt_hex {
-    font-family: Arial;
+    font-family: BillenniumSemiBold;
     line-height: 30px;
     font-size: 14pt;
     margin-top: 5px;
@@ -114,7 +130,7 @@ li {
 }
 
 .txt_agenda {
-    font-family: Arial;
+    font-family: BillenniumRegular;
     line-height: 30px;
     font-size: 14pt;
     margin-top: 5px;
@@ -123,7 +139,7 @@ li {
 }
 
 .txt_white {
-    font-family: Arial;
+    font-family: BillenniumRegular;
     line-height: 30px;
     font-size: 16pt;
     padding-left:40px;
@@ -150,7 +166,6 @@ button {
     color: #ffffff;
     background-color: #ff5a00;
     font-size: 20px;
-    font-family: Arial;
     font-weight: bold;
     border: 2px solid #ff5a00;
     padding: 15px 50px;
@@ -170,12 +185,12 @@ button:hover {
     font-weight: normal;
     font-size: 30pt;
     line-height:45px;
-    font-family: Arial;
+    font-family: BillenniumRegular;
     color: #ff5a00;
 }
 
 mark.orange {
-    font-family: Arial;
+    font-family: BillenniumSemiBold;
     line-height: 30px;
     background-color: transparent;
     font-size: 14pt;
@@ -185,66 +200,7 @@ mark.orange {
 }
 
 .txt_picto {
-    font-family: Arial;
-    line-height: 30px;
-    font-size: 18pt;
-    margin-top: 20px;
-    color: black;
-    font-weight: 600;
-}
-.txt_hex {
-    font-family: Myriad Pro;
-    line-height: 30px;
-    font-size: 14pt;
-    margin-top: 5px;
-    color: black;
-    font-weight: 600;
-}
-
-.txt_agenda {
-    font-family: Myriad Pro;
-    line-height: 30px;
-    font-size: 14pt;
-    margin-top: 5px;
-    color: black;
-    font-weight: 500;
-}
-
-.txt_white {
-    font-family: Myriad Pro;
-    line-height: 30px;
-    font-size: 16pt;
-    padding-left:30px;
-    padding-top:30px;
-    padding-bottom: 30px;
-    padding-right: 30px;
-    color: white;
-    font-weight: 500;
-}
-
-.size_header {
-    font-size: 22pt;
-    line-height: 45px;
-    font-weight: bold;
-    padding-bottom: 0px;
-    letter-spacing: normal;
-}
-
- .col_color {
-     background-color: #ff5a00;
- }
-mark.orange {
-    font-family: Myriad Pro;
-    line-height: 30px;
-    background-color: transparent;
-    font-size: 14pt;
-    margin-top: 5px;
-    color: #ff5a00;
-    font-weight: 600;
-}
-
-.txt_picto {
-    font-family: Myriad Pro;
+    font-family: BillenniumSemiBold;
     line-height: 30px;
     font-size: 18pt;
     margin-top: 20px;
@@ -253,7 +209,7 @@ mark.orange {
 }
 
 .txt1 {
-    font-family: Arial;
+    font-family: BillenniumRegular;
     line-height: 30px;
     font-size: 16pt;
     margin-top: 50px;
@@ -263,7 +219,7 @@ mark.orange {
 }
 
 .txt3 {
-    font-family: Myriad Pro;
+    font-family: BillenniumSemiBold;
     line-height: 62px;
     font-size: 20pt;
     margin-top: 11px;
