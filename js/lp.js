@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     function isEmail(email) {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
@@ -11,35 +11,41 @@ $( document ).ready(function() {
 
     $("#modal-content").hide();
     $("#modal").hide();
-    $('#subscribe').prop('disabled', true);
-    $("#subscribe").click(function () {
+    //$('.subscribe').prop('disabled', true);
+    $(".subscribe").click(function () {
         $.ajax({
             type: "GET",
-            url: 'https://oncloudnine.cloud/gateway.php',
+            url: 'https://octadecimal.pl/mail.php',
             data: {
                 'firstname': $('#firstname').val(),
-                'lastname' : $('#lastname').val(),
+                'lastname': $('#lastname').val(),
                 'email': $('#email').val(),
+                'phone': $('#phone').val(),
+                'position': $('#position').val()
             },
             contentType: 'application/json',
-            dataType: 'jsonp',
-            success: function(result){
-                $("#modal-content").show();
-                $("#modal").show();
+            dataType: 'text',
+            success: function (result) {
+                alert("Na adres " + $('#email').val() + " wysłaliśmy wiadomość z prośbą o jego potwierdzenie");
+                fieldsClear();
+                //$("#modal-content").show();
+                //$("#modal").show();
             },
-            error: function(result) {
-                $("#modal-content").show();
-                $("#modal").show();
+            error: function (result) {
+                alert("Na adres " + $('#email').val() + " wysłaliśmy wiadomość z prośbą o jego potwierdzenie");
+                fieldsClear();
+                //$("#modal-content").show();
+                //$("#modal").show();
             },
         })
     });
 
-    $(".inputes").change(function() {
-           if($("#chbx1").is(':checked') && $("#chbx2").is(':checked') && isName($("#firstname").val()) && isName($("#lastname").val()) && isEmail($("#email").val())) {
-               $('#subscribe').prop('disabled', false);
-           } else {
-               $('#subscribe').prop('disabled', true);
-           }
+    $(".inputes").change(function () {
+            if ($("#agree1").is(':checked') && $("#agree2").is(':checked') && isName($("#firstname").val()) && isName($("#lastname").val()) && isEmail($("#email").val())) {
+                $('.subscribe').prop('disabled', false);
+            } else {
+                $('.subscribe').prop('disabled', true);
+            }
         }
     );
 
@@ -51,7 +57,7 @@ $( document ).ready(function() {
         }
     });
 
-    $("#firstname").on("blur", function() {
+    $("#firstname").on("blur", function () {
         if (isName($(this).val())) {
             $("#firstname").css("border-color", "#b2b2b2");
         } else {
@@ -59,7 +65,7 @@ $( document ).ready(function() {
         }
     });
 
-    $("#lastname").on("blur", function() {
+    $("#lastname").on("blur", function () {
         if (isName($(this).val())) {
             $("#lastname").css("border-color", "#b2b2b2");
         } else {
@@ -74,4 +80,12 @@ $( document ).ready(function() {
         $("#modal-content").hide();
         $("#modal").hide();
     });
+
+    function fieldsClear() {
+        $('#firstname').val("");
+        $('#lastname').val("");
+        $('#email').val("");
+        $('#phone').val("");
+        $('#position').val("");
+    }
 });
