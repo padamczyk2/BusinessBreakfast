@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+require_once "vendor/autoload.php";
+
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
 $url = 'https://api.getresponse.com/v3/contacts';
@@ -30,6 +35,13 @@ curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
 $output   = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 curl_close($handle);
+
+$loader = new FilesystemLoader(__DIR__ . '/templates');
+$twig = new Environment($loader);
+
+echo $twig->render('first.html.twig', ['name' => 'John Doe',
+    'occupation' => 'gardener']);
+
 
 if ($httpCode === 202) {
     echo "<p>Dziękujemy serdecznie, Twój e-mail " . $data['email'] . " został zarejestrowany</p>>";
