@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(".subscribe").click(function () {
         $.ajax({
             type: "GET",
-            url: 'https://octadecimal.pl/mail.php',
+            url: 'https://spotkanie-biznesowe.cloud/mail.php',
             data: {
                 'firstname': $('#firstname').val(),
                 'lastname': $('#lastname').val(),
