@@ -10,7 +10,7 @@
 }
 
 .img-fluid {
-    max-width: 100%; !important;
+    max-width: 100%;
     height: auto; !important;
 }
 
@@ -108,7 +108,7 @@ li {
 .txt_header2 {
     font-family: BillenniumSemiBold;
     line-height: 60px;
-    font-size: 36pt;
+    font-size: 32pt;
     margin-top: 30px;
     color: black;
 }
