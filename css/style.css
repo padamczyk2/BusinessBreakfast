@@ -44,7 +44,7 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
-input[type=submit] {
+button[type=submit] {
     width: 162px;
     height: 55px;
     border-radius: 5px;
