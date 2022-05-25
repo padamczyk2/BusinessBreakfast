@@ -9,6 +9,10 @@
     src: url("../fonts/Billennium-SemiBold.otf");
 }
 
+.img-fluid {
+    max-width: 100%; !important;
+    height: auto; !important;
+}
 
 body {
     background: white;
@@ -45,19 +49,22 @@ input[type=checkbox] {
 }
 
 button[type=submit] {
-    width: 162px;
-    height: 55px;
+    width: 280px;
+    height: 60px;
     border-radius: 5px;
-    border: 0px !important;
+    border: 2px solid #ff5a00 !important;
     background-color: #ff5a00;
-    padding: 15px 50px;
+    padding-bottom: 15px;
     cursor: pointer;
     font-family: BillenniumSemiBold !important;
-    font-size: 20pt !important;
+    font-size: 16pt !important;
+    color: #ffffff; !important;
+    cursor: pointer; !important;
 }
 
-input[type=submit]:hover {
-    background-color: #ff5a00 !important;
+button[type=submit]:hover {
+    background-color: white !important;
+    color: #ff5a00;
 }
 
 input[type=submit]:disabled {
