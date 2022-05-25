@@ -2,7 +2,8 @@
 session_start();
 
 require_once "vendor/autoload.php";
-
+require_once "vendor/twig/twig/src/Environment.php";
+require_once "vendor/twig/twig/src/Loader/FilesystemLoader.php";
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -17,6 +18,12 @@ $data = [
   'email'    => $_GET['email'],
   'campaign' => ['campaignId' => 'Q5B4Y']
 ];
+
+$loader = new FilesystemLoader(__DIR__ . 'templates');
+$twig = new Environment($loader);
+
+echo $twig->render('gateway.html');
+
 
 if (md5($data['email']) !== $_GET['id']) {
     echo "<p>Ups, coś poszło nie tak - byc może Twój e-mail już został zarejestrowany wcześniej</p>";
@@ -35,12 +42,6 @@ curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
 $output   = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 curl_close($handle);
-
-$loader = new FilesystemLoader(__DIR__ . '/templates');
-$twig = new Environment($loader);
-
-echo $twig->render('first.html.twig', ['name' => 'John Doe',
-    'occupation' => 'gardener']);
 
 
 if ($httpCode === 202) {
