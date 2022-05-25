@@ -87,6 +87,11 @@ span.required {
     font-size: 14pt;
 }
 
+a {
+    color: black;
+    text-decoration: underline;
+}
+
 li {
     font-family: BillenniumSemiBold;
     line-height: 40px;
@@ -239,6 +244,16 @@ mark.orange {
     padding-left: 30px;
     color: black;
     font-weight: 600;
+}
+
+.thanks {
+    font-family: BillenniumRegular;
+    line-height: 30px;
+    font-size: 14pt;
+    margin-top: 50px;
+    padding-left: 0px;
+    color: black;
+    font-weight: 500;
 }
 
 .line {

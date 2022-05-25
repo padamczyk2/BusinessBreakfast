@@ -8,9 +8,6 @@ $(document).ready(function () {
         var regex = /^[a-zA-Z]{3,16}$/;
         return regex.test(name);
     }
-
-    $("#modal-content").hide();
-    $("#modal").hide();
     $('.subscribe').prop('disabled', true);
     $(".subscribe").click(function () {
         $.ajax({
@@ -26,16 +23,10 @@ $(document).ready(function () {
             contentType: 'application/json',
             dataType: 'text',
             success: function (result) {
-                alert("Na adres " + $('#email').val() + " wysłaliśmy wiadomość z prośbą o jego potwierdzenie");
-                fieldsClear();
-                //$("#modal-content").show();
-                //$("#modal").show();
+                location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
             },
             error: function (result) {
-                alert("Na adres " + $('#email').val() + " wysłaliśmy wiadomość z prośbą o jego potwierdzenie");
-                fieldsClear();
-                //$("#modal-content").show();
-                //$("#modal").show();
+                location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
             },
         })
     });
