@@ -22,6 +22,9 @@ $hash = md5($data['email']);
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
 
+echo $twig->render('register.html', ['query' => $query, 'hash' => $hash]);
+die;
+
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
