@@ -54,7 +54,7 @@ button[type=submit] {
     width: 280px;
     height: 60px;
     border-radius: 5px;
-    border: 2px solid #ff5a00 !important;
+    border: 0px !important;
     background-color: #ff5a00;
     color: white;
     padding: 15px 50px;
