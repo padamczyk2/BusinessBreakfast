@@ -22,9 +22,6 @@ $hash = md5($data['email']);
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
 
-echo $twig->render('mail.html', ['query' => $query, 'hash' => $hash]);
-die;
-
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
@@ -36,7 +33,7 @@ $mail->Password = "Adu893rjhds-23";
 $mail->CharSet = "UTF-8";
 $mail->SMTPDebug = 1;
 $mail->IsHTML(true);
-$mail->setFrom('spotkaniebiznesowe@cloud.pl', 'Spotkanie biznesowe');
+$mail->setFrom('business.meeting@a1btl.pl', 'Spotkanie biznesowe');
 $mail->AddAddress($data['email']);
 $mail->Subject = "Zaproszenie na śniadanie businessowe";
 $mail->Body = $twig->render('register.html', ['query' => $query, 'hash' => $hash]);
