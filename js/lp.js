@@ -41,7 +41,15 @@ $(document).ready(function () {
     });
 
     $(".inputes").change(function () {
-            if ($("#agree1").is(':checked') && $("#agree2").is(':checked') && isName($("#firstname").val()) && isName($("#lastname").val()) && isEmail($("#email").val())) {
+            if ($("#agree1").is(':checked')
+                && $("#agree2").is(':checked')
+                && $("#agree3").is(':checked')
+                && $("#agree4").is(':checked')
+                && $("#agree5").is(':checked')
+                && $("#agree6").is(':checked')
+                && isName($("#firstname").val())
+                && isName($("#lastname").val())
+                && isEmail($("#email").val())) {
                 $('.subscribe').prop('disabled', false);
             } else {
                 $('.subscribe').prop('disabled', true);

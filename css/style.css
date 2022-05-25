@@ -18,19 +18,21 @@ body {
     overflow-x: hidden;
 }
 
-.input {
-    width: 504px !important;
-    height: 75px !important;
-    border-radius: 10px !important;
+input[type=text] {
+    width: 100% !important;
+    height: 55px !important;
     font-family: BillenniumRegular !important;
     color: black !important;
     font-size: 20pt !important;
+    border: 0px;
+    border-bottom: 1px solid #d2d2d2;
 }
 
 .ml-min-30 {
     margin-left: -30px;
 }
-.bline{
+
+.bline {
     border-color: #ff5a00;
     border-style: solid;
     border-width: 2px;
@@ -50,18 +52,21 @@ button[type=submit] {
     border-radius: 5px;
     border: 0px !important;
     background-color: #ff5a00;
+    color: white;
     padding: 15px 50px;
     cursor: pointer;
     font-family: BillenniumSemiBold !important;
-    font-size: 20pt !important;
+    font-size: 12pt !important;
+    padding: 0px !important;
+    font-weight: normal !important;
 }
 
-input[type=submit]:hover {
-    background-color: #ff5a00 !important;
+button[type=submit]:hover {
+    background-color: #ff5c03 !important;
 }
 
-input[type=submit]:disabled {
-    background-color: #666666;
+button[type=submit]:disabled {
+    background-color: gray;
 }
 
 .vcenter {
@@ -111,6 +116,7 @@ li {
     margin-top: 30px;
     color: black;
 }
+
 .txt_info {
     font-family: BillenniumRegular;
     line-height: 40px;
@@ -119,6 +125,7 @@ li {
     color: black;
     font-weight: 500;
 }
+
 .txt_hex {
     font-family: BillenniumSemiBold;
     line-height: 30px;
@@ -140,8 +147,8 @@ li {
     font-family: BillenniumRegular;
     line-height: 30px;
     font-size: 16pt;
-    padding-left:40px;
-    padding-top:40px;
+    padding-left: 40px;
+    padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 40px;
     color: white;
@@ -157,35 +164,34 @@ li {
 }
 
 .col_color {
-     background-color: #ff5a00;
- }
-
-button {
-    color: #ffffff;
     background-color: #ff5a00;
-    font-size: 20px;
-    font-weight: bold;
-    border: 2px solid #ff5a00;
-    padding: 15px 50px;
-    cursor: pointer
-}
-button:hover {
-    color: #ff5a00;
-    background-color: #ffffff;
 }
 
 .form_background {
-    margin: 100px;
-    background-color: white;
+    width: 960px !important;
+    margin-top: 100px;
+    background-color: gray !important;
+    border: 1px black !important;
+    background: lightblue url("/img/white-pixel.gif") repeat fixed center;
 }
+
 .form_header {
     text-align: center;
     font-weight: normal;
     font-size: 30pt;
-    line-height:45px;
+    line-height: 45px;
     font-family: BillenniumRegular;
     color: #ff5a00;
 }
+
+.agree {
+    font-family: BillenniumRegular;
+    font-size: 10pt;
+    line-height: 20px;
+    color: black;
+    font-weight: lighter;
+}
+
 
 mark.orange {
     font-family: BillenniumSemiBold;
@@ -225,7 +231,10 @@ mark.orange {
 }
 
 .line {
-    border-top: 5px solid #ff5a00;
+    border-top: 10px solid #ff5a00 !important;
+    filter: alpha(opacity=100) !important;
+    opacity: 1 !important;
+    -moz-opacity: 1 !important;
 }
 
 #modal {
@@ -238,14 +247,14 @@ mark.orange {
 }
 
 #modal-content {
-    background-color: black!important;
-    filter:alpha(opacity=50);
+    background-color: black !important;
+    filter: alpha(opacity=50);
     opacity: 0.5;
-    -moz-opacity:0.5;
-    border: 0!important;
-    box-shadow: none!important;
-    -webkit-box-shadow: none!important;
-    -moz-box-shadow: none!important;
+    -moz-opacity: 0.5;
+    border: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
     overflow: hidden;
     margin: auto;
     position: absolute;
