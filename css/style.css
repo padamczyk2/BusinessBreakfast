@@ -54,7 +54,7 @@ button[type=submit] {
     width: 280px;
     height: 60px;
     border-radius: 5px;
-    border: 2px solid #ff5a00 !important;
+    border: 0px !important;
     background-color: #ff5a00;
     color: white;
     padding: 15px 50px;
@@ -174,9 +174,16 @@ li {
 .form_background {
     width: 960px !important;
     margin-top: 100px;
-    background-color: gray !important;
-    border: 1px black !important;
-    background: lightblue url("/img/white-pixel.gif") repeat fixed center;
+    border: 1px #f7f7f7 !important;
+    background: white url("/img/white-pixel.gif") repeat fixed center;
+}
+
+form {
+    border: 1px #f7f7f7 !important;
+}
+
+.white_background {
+    background: white url("/img/white-pixel.gif") repeat fixed center;
 }
 
 .form_header {
@@ -239,6 +246,7 @@ mark.orange {
     filter: alpha(opacity=100) !important;
     opacity: 1 !important;
     -moz-opacity: 1 !important;
+    width: 860px;
 }
 
 #modal {
