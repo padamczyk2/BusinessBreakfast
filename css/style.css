@@ -48,16 +48,16 @@ button[type=submit] {
     width: 162px;
     height: 55px;
     border-radius: 5px;
-    border: 2px solid #ff5a00;
+    border: 0px !important;
+    background-color: #ff5a00;
     padding: 15px 50px;
     cursor: pointer;
     font-family: BillenniumSemiBold !important;
     font-size: 20pt !important;
 }
 
-button[type=submit]:hover {
-    color: #ff5a00;
-    background-color: #ffffff;
+input[type=submit]:hover {
+    background-color: #ff5a00 !important;
 }
 
 input[type=submit]:disabled {

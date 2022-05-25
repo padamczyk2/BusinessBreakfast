@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $("#modal-content").hide();
     $("#modal").hide();
-    //$('.subscribe').prop('disabled', true);
+    $('.subscribe').prop('disabled', true);
     $(".subscribe").click(function () {
         $.ajax({
             type: "GET",
