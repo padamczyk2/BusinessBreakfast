@@ -16,17 +16,17 @@ $(document).ready(function () {
             data: {
                 'firstname': $('#firstname').val(),
                 'lastname': $('#lastname').val(),
-                'email': $('#email').val(),
-                'phone': $('#phone').val(),
-                'position': $('#position').val()
+                'email': $('#email').val()
             },
             contentType: 'application/json',
-            dataType: 'jsonp',
+            dataType: 'script',
             success: function (result) {
-                location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
+                console.log(result);
+                //location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
             },
             error: function (result) {
-                location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
+                console.log(result);
+                //location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
             },
         })
     });
@@ -71,20 +71,4 @@ $(document).ready(function () {
             $("#lastname").css("border-color", "red");
         }
     });
-
-    $("#thanks-modal").click(function () {
-        $('#firstname').val("");
-        $('#lastname').val("");
-        $('#email').val("");
-        $("#modal-content").hide();
-        $("#modal").hide();
-    });
-
-    function fieldsClear() {
-        $('#firstname').val("");
-        $('#lastname').val("");
-        $('#email').val("");
-        $('#phone').val("");
-        $('#position').val("");
-    }
 });

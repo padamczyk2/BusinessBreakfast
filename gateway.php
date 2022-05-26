@@ -21,10 +21,8 @@ $data = [
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
 
-
 if (md5($data['email']) !== $_GET['id']) {
-    echo $twig->render('register.html', ['message_bold' => 'Niestety coś poszło nie tak.', 'message' => 'Prosimy o ponowną rejestrację..']);
-    die;
+    //echo $twig->render('register.html', ['message_bold' => 'Niestety coś poszło nie tak.', 'message' => 'Prosimy o ponowną rejestrację..']);
 }
 
 $data_string = json_encode($data);

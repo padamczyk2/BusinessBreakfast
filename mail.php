@@ -30,17 +30,16 @@ $mail->Port = 25;
 $mail->Username = "system-www@spotkanie-biznesowe.cloud";
 $mail->Password = "Adu893rjhds-23";
 $mail->CharSet = "UTF-8";
-$mail->SMTPDebug = 1;
+$mail->SMTPDebug = 0;
 $mail->IsHTML(true);
 $mail->setFrom('business.meeting@a1btl.pl', 'Spotkanie biznesowe');
 $mail->AddAddress($data['email']);
 $mail->Subject = "Zaproszenie na śniadanie businessowe";
 $mail->Body = $twig->render('mail.html', ['query' => $query, 'hash' => $hash]);
 
-
 if ($mail->Send()) {
-    http_response_code(200);
+    echo $twig->render('thanks.html');
 } else {
-    http_response_code(409);
+    echo $twig->render('thanks.html');
 }
 
