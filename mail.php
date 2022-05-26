@@ -9,8 +9,6 @@ use Twig\Loader\FilesystemLoader;
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
-$_GET['email'] = 'piotr.adamczyk@estoremedia.com';
-
 $data = [
     'name' => $_GET['firstname'] . " " . $_GET['lastname'],
     'email' => $_GET['email'],
@@ -23,9 +21,6 @@ $hash = md5($data['email']);
 
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
-
-echo $twig->render('mail.html', ['query' => $query, 'hash' => $hash]);
-//die;
 
 $mail = new PHPMailer();
 $mail->IsSMTP();

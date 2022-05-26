@@ -21,7 +21,7 @@ $(document).ready(function () {
                 'position': $('#position').val()
             },
             contentType: 'application/json',
-            dataType: 'text',
+            dataType: 'jsonp',
             success: function (result) {
                 location.href = 'https://spotkanie-biznesowe.cloud/thanks.html';
             },
