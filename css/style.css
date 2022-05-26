@@ -40,7 +40,7 @@ th,
 td  {
      border: none; !important;
      border-spacing: 0 !important;
-     border-collapse: collapse; !important;
+     padding: 0; !important;
  }
 
 .ml-min-30 {
