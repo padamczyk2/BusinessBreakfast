@@ -13,7 +13,7 @@ $url = 'https://api.getresponse.com/v3/contacts';
 $header = ["Content-Type: application/json; charset=utf-8", "X-Auth-Token: api-key 5eaksrqtld9q406rcvn7z6gsk1257kfn"];
 
 $data = [
-    'name' => $_GET['name'],
+    'name' => $_GET['name'].", " . $_GET['position']. ", tel. ".$_GET['phone'],
     'email' => $_GET['email'],
     'campaign' => ['campaignId' => 'Q5B4Y']
 ];
