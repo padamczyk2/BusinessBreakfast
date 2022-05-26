@@ -1,12 +1,12 @@
 @font-face {
     font-family: BillenniumRegular;
-    src: url("https://spotkanie-biznesowe.cloud/fonts/Billennium-Regular.otf");
+    src: url("../fonts/Billennium-Regular.otf");
 
 }
 
 @font-face {
     font-family: BillenniumSemiBold;
-    src: url("https://spotkanie-biznesowe.cloud/fonts/Billennium-SemiBold.otf");
+    src: url("../fonts/Billennium-SemiBold.otf");
 }
 
 .img-fluid {
