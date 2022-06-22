@@ -5,7 +5,7 @@ $(document).ready(function () {
     }
 
     function isName(name) {
-        var regex = /^[a-zA-Z]{3,16}$/;
+        var regex = /^[a-zA-ZŁŚÓŻząęółśżźćń]{3,16}$/;
         return regex.test(name);
     }
     $('.subscribe').prop('disabled', true);
